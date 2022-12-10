@@ -44,6 +44,15 @@ public class FacultyController {
     public List<Faculty> facultiesByColor(@RequestParam("color") String color) {
         return facultyService.facultiesByColor(color);
     }
+    @GetMapping(params = "colorOrName")
+    public List<Faculty> facultiesByColorOrName(@RequestParam("colorOrName") String colorOrName) {
+        return facultyService.facultiesByColorOrName(colorOrName);
+    }
+
+    @GetMapping("/{id}/students")
+    public List<Student> getFacultyStudents(@PathVariable("id") Long id) {
+        return facultyService.getFacultyStudents(id);
+    }
 
 
 }
