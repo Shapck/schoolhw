@@ -61,6 +61,10 @@ public class StudentService {
         }
         return student.getFaculty();
     }
+
+    public Student findStudent(long id) {
+        return studentRepository.findById(id).orElseThrow();
+    }
 }
 
 
