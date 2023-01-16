@@ -1,7 +1,5 @@
 package ru.hogwarts.school.model;
-
-
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 public class Avatar {
